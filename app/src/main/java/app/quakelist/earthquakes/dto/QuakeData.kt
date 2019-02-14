@@ -1,0 +1,30 @@
+package app.quakelist.earthquakes.dto
+
+data class QuakeData(
+        val alert: Any,
+        val cdi: Any,
+        val code: String,
+        val detail: String,
+        val dmin: Any,
+        val felt: Any,
+        val gap: Any,
+        val ids: String,
+        val mag: Double,
+        val magType: String,
+        val mmi: Any,
+        val net: String,
+        val nst: Any,
+        val place: String,
+        val rms: Double,
+        val sig: Int,
+        val sources: String,
+        val status: String,
+        val time: Long,
+        val title: String,
+        val tsunami: Int,
+        val type: String,
+        val types: String,
+        val tz: Int,
+        val updated: Long,
+        val url: String
+)
