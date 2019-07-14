@@ -16,4 +16,21 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/layout_single_item" />
 
+    <TextView
+        android:id="@+id/tv_empty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|clip_vertical"
+        android:padding="8dp"
+        android:text="@string/empty_text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="m" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

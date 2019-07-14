@@ -40,19 +40,25 @@ class QuakesFragment : Fragment(), Observer<PagedList<QuakeFeature>> {
         mRecyclerAdapter = QuakeListAdapter(context)
 
         rv_quake_list.apply {
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = LinearLayoutManager(context)
             adapter = mRecyclerAdapter
         }
     }
 
     override fun onResume() {
         super.onResume()
-        // Listen to data change
-        viewModel.getIncidents().observe(this, this)
+        viewModel.getIncidents().observe(this, this)  // Listen to data change
     }
 
-    override fun onChanged(incidentList: PagedList<QuakeFeature>?) {
-        mRecyclerAdapter.submitList(incidentList)
+    override fun onChanged(incidentList: PagedList<QuakeFeature>) {
+        if (incidentList.isNotEmpty()) {
+            rv_quake_list.visibility = View.VISIBLE
+            tv_empty_list.visibility = View.GONE
+            mRecyclerAdapter.submitList(incidentList)
+        } else {
+            rv_quake_list.visibility = View.GONE
+            tv_empty_list.visibility = View.VISIBLE
+        }
     }
 
     override fun onPause() {
