@@ -1,6 +1,8 @@
+### Android ###
 # Built application files
 *.apk
 *.ap_
+*.aab
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -12,6 +14,7 @@
 bin/
 gen/
 out/
+release/
 
 # Gradle files
 .gradle/
@@ -26,36 +29,38 @@ proguard/
 # Log Files
 *.log
 
-# Android Studio Navigation editor temp files
-.navigation/
-
-# Android Studio captures folder
+# Android Studio
+/*/build/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
 captures/
-
-# IntelliJ
-*.iml
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries
-.idea/libraries
-.idea/caches
-
-# Keystore files
-# Uncomment the following line if you do not want to check your keystore files in.
-#*.jks
+.navigation/
+*.ipr
+*~
+*.swp
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# NDK
+obj/
 
-# Freeline
-freeline.py
-freeline/
-freeline_project_description.json
+# IntelliJ IDEA
+*.iml
+*.iws
+/out/
+
+# IntelliJ - User-specific configurations
+.idea/
+
+# Package Files #
+*.war
+# Keystore files
+# Uncomment the following lines if you do not want to check your keystore files in.
+*.jks
+*.keystore
 
 # fastlane
 fastlane/report.xml
@@ -63,3 +68,20 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+
+# Version control
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+
+# Android Patch #
+gen-external-apklibs
+output.json
+
+# Replacement of .externalNativeBuild directories introduced with Android Studio 3.5.
+.cxx/
